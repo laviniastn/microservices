@@ -1,0 +1,8 @@
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-3 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-8 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-6 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-5 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
