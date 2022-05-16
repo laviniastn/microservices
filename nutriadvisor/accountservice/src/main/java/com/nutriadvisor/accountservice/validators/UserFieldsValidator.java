@@ -12,10 +12,10 @@ public class UserFieldsValidator {
 
     private static final Log LOGGER = LogFactory.getLog(UserFieldsValidator.class);
 
-    public static void validateInsertOrUpdate(UserAccountDTO patientDTO) {
+    public static void validateInsertOrUpdate(UserAccountDTO userAccountDTO) {
         List<String> errors = new ArrayList<>();
-        if (patientDTO == null) {
-            errors.add("userDTO is null");
+        if (userAccountDTO == null) {
+            errors.add("userAccountDTO is null");
             throw new IncorrectParameterException(UserAccountDTO.class.getSimpleName(), errors);
         }
 
