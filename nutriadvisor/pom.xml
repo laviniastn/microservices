@@ -6,7 +6,8 @@
     <modules>
         <module>accountservice</module>
 		<module>notificationservice</module>
-	</modules>
+        <module>foodservice</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

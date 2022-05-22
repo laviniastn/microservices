@@ -1,0 +1,1 @@
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
