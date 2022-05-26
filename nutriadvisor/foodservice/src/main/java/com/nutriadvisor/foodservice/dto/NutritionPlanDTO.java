@@ -8,7 +8,7 @@ public class NutritionPlanDTO {
 
     private int id;
 
-    private String nrOfDays;
+    private int nrOfDays;
 
     private List<FoodMenu> foodMenus;
 
@@ -16,7 +16,7 @@ public class NutritionPlanDTO {
 
     }
 
-    public NutritionPlanDTO(int id, String nrOfDays){
+    public NutritionPlanDTO(int id, int nrOfDays){
         this.id=id;
         this.nrOfDays=nrOfDays;
 
@@ -30,11 +30,11 @@ public class NutritionPlanDTO {
         this.id = id;
     }
 
-    public String getNrOfDays() {
+    public int getNrOfDays() {
         return nrOfDays;
     }
 
-    public void setNrOfDays(String nrOfDays) {
+    public void setNrOfDays(int nrOfDays) {
         this.nrOfDays = nrOfDays;
     }
 }

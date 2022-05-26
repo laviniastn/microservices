@@ -16,7 +16,7 @@ public class NutritionPlan {
     private int id;
 
     @Column(name = "nr_of_days", nullable = true)
-    private String nrOfDays;
+    private int nrOfDays;
 
     @OneToMany(mappedBy="nutritionPlan")
     private List<FoodMenu> foodMenus;
@@ -25,7 +25,7 @@ public class NutritionPlan {
 
     }
 
-    public NutritionPlan(int id, String nrOfDays){
+    public NutritionPlan(int id, int nrOfDays){
         this.id=id;
         this.nrOfDays=nrOfDays;
 
@@ -39,11 +39,11 @@ public class NutritionPlan {
         this.id = id;
     }
 
-    public String getNrOfDays() {
+    public int getNrOfDays() {
         return nrOfDays;
     }
 
-    public void setNrOfDays(String nrOfDays) {
+    public void setNrOfDays(int nrOfDays) {
         this.nrOfDays = nrOfDays;
     }
 

@@ -9,9 +9,9 @@ public class FoodMenuDTO {
 
     private int id;
 
-    private String dayNr;
+    private int dayNr;
 
-    private String kcals;
+    private float kcals;
 
     private List<Receipe> receipes;
 
@@ -21,7 +21,7 @@ public class FoodMenuDTO {
 
     }
 
-    public FoodMenuDTO(int id, String dayNr, String kcals){
+    public FoodMenuDTO(int id, int dayNr, float kcals){
         this.id=id;
         this.dayNr=dayNr;
         this.kcals=kcals;
@@ -36,19 +36,19 @@ public class FoodMenuDTO {
         this.id = id;
     }
 
-    public String getDayNr() {
+    public int getDayNr() {
         return dayNr;
     }
 
-    public void setDayNr(String dayNr) {
+    public void setDayNr(int dayNr) {
         this.dayNr = dayNr;
     }
 
-    public String getKcals() {
+    public float getKcals() {
         return kcals;
     }
 
-    public void setKcals(String kcals) {
+    public void setKcals(float kcals) {
         this.kcals = kcals;
     }
 }

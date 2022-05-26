@@ -51,3 +51,103 @@ DEBUG http-nio-8088-exec-5 com.nutriadvisor.foodservice.controllers.ReceipeContr
 DEBUG http-nio-8088-exec-7 com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
 DEBUG http-nio-8088-exec-6 com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
 DEBUG http-nio-8088-exec-10 com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Update role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get  role by id
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Create role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Delete role
+DEBUG main com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Update user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account

@@ -171,4 +171,154 @@ public class UserAccountTest {
         assertEquals(expectedPhoto,actualPhoto);
     }
 
+    @Test
+    public void test_setUserAccountId(){
+        /**
+         * GIVEN
+         */
+
+        int expectedId=1;
+
+        /**
+         * WHEN
+         */
+        userAccount.setId(expectedId);
+        int actualId=userAccount.getId();
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedId,actualId);
+    }
+
+    @Test
+    public void test_setUserAccountFirstName(){
+        /**
+         * GIVEN
+         */
+
+        String expectedFirstName="Lavinia";
+
+        /**
+         * WHEN
+         */
+        userAccount.setFirstName(expectedFirstName);
+        String actualFirstName= userAccount.getFirstName();
+
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedFirstName,actualFirstName);
+    }
+
+    @Test
+    public void test_setUserAccountLastName(){
+        /**
+         * GIVEN
+         */
+
+        String expectedLastName="Lavinia";
+
+        /**
+         * WHEN
+         */
+        userAccount.setLastName(expectedLastName);
+        String actualLastName= userAccount.getLastName();
+
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedLastName,actualLastName);
+    }
+
+    @Test
+    public void test_setUserAccountEmail(){
+        /**
+         * GIVEN
+         */
+
+        String expectedEmail="laviniastn25@gmail.com";
+
+        /**
+         * WHEN
+         */
+        userAccount.setEmail(expectedEmail);
+        String actualEmail= userAccount.getEmail();
+
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedEmail,actualEmail);
+    }
+
+    @Test
+    public void test_setUserAccountPassword(){
+        /**
+         * GIVEN
+         */
+
+        String expectedPassword="password";
+
+        /**
+         * WHEN
+         */
+        userAccount.setPassword(expectedPassword);
+        String actualPassword= userAccount.getPassword();
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedPassword,actualPassword);
+    }
+
+    @Test
+    public void test_setUserAccountRole(){
+        /**
+         * GIVEN
+         */
+
+        Role expectedRole = new Role(1, "role");
+
+        /**
+         * WHEN
+         */
+        userAccount.setRole(expectedRole);
+        Role actualRole = userAccount.getRole();
+
+        /**
+         * THEN
+         */
+        assertEquals(expectedRole.getId(),actualRole.getId());
+        assertEquals(expectedRole.getRoleName(),actualRole.getRoleName());
+    }
+
+    @Test
+    public void test_setUserAccountPhoto(){
+        /**
+         * GIVEN
+         */
+
+        byte[] expectedPhoto=null;
+
+        /**
+         * WHEN
+         */
+        userAccount.setPhoto(expectedPhoto);
+        byte[] actualPhoto=userAccount.getPhoto();
+
+        /**
+         * THEN
+         */
+
+        assertEquals(expectedPhoto,actualPhoto);
+    }
+
 }

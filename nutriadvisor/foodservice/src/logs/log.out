@@ -1,1 +1,120 @@
 DEBUG http-nio-8088-exec-1 com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG http-nio-8088-exec-3 com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG http-nio-8088-exec-4 com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG http-nio-8088-exec-1 com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Delete food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get all food menus
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Update food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Get food menu by id
+DEBUG main com.nutriadvisor.foodservice.controllers.FoodMenuController -Create food menu
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Update nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get all nutrition plans
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Create nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Delete nutrition plan
+DEBUG main com.nutriadvisor.foodservice.controllers.NutritionPlanController -Get utrition plan by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Create receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Delete receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get  receipe by id
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Update receipe
+DEBUG main com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes

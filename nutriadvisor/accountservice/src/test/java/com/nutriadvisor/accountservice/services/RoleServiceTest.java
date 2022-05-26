@@ -125,8 +125,8 @@ public class RoleServiceTest {
         /**
          *  GIVEN
          */
-        int id = roles.get(0).getId();
-        given(roleRepository.findById(any())).willThrow(new ResourceNotFoundException("Role", "role id", id));
+
+        given(roleRepository.findById(any())).willReturn(Optional.ofNullable(null));
         String expectedMessage = "Role not found with role id : '1'";
 
         /**

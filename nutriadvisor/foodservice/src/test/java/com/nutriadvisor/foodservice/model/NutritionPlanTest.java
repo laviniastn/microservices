@@ -1,4 +1,4 @@
-package com.nutriadvisor.accountservice.model;
+package com.nutriadvisor.foodservice.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,18 +7,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class RoleTest {
+public class NutritionPlanTest {
 
-
-
-    private Role role;
+    private NutritionPlan nutritionPlan;
 
     /**
      * Initialization
      */
     @BeforeEach
     public void SetUp() {
-        role=new Role(1,"role");
+        nutritionPlan=new NutritionPlan(1, 10);
     }
 
     @Test
@@ -31,7 +29,7 @@ public class RoleTest {
         /**
          * WHEN
          */
-         int actualId=role.getId();
+        int actualId=nutritionPlan.getId();
         /**
          * THEN
          */
@@ -48,8 +46,8 @@ public class RoleTest {
         /**
          * WHEN
          */
-        this.role.setId(expectedId);
-        int actualId=role.getId();
+        nutritionPlan.setId(expectedId);
+        int actualId=nutritionPlan.getId();
         /**
          * THEN
          */
@@ -57,37 +55,38 @@ public class RoleTest {
     }
 
     @Test
-    public void test_getRoleName(){
+    public void test_getNrOfDays(){
         /**
          * GIVEN
          */
-        String expectedRoleName="role";
+        int expectedNrOfDays=10;
 
         /**
          * WHEN
          */
-        String actualRoleName=role.getRoleName();
+        int actualNrOfDays=nutritionPlan.getNrOfDays();
         /**
          * THEN
          */
-        assertEquals(expectedRoleName,actualRoleName);
+        assertEquals(expectedNrOfDays,actualNrOfDays);
     }
 
     @Test
-    public void test_setRoleName(){
+    public void test_setNrOfDays(){
         /**
          * GIVEN
          */
-        String expectedRoleName="admin";
+        int expectedNrOfDays=10;
 
         /**
          * WHEN
          */
-        this.role.setRoleName(expectedRoleName);
-        String actualRoleName=role.getRoleName();
+        nutritionPlan.setNrOfDays(expectedNrOfDays);
+        int actualNrOfDays=nutritionPlan.getNrOfDays();
         /**
          * THEN
          */
-        assertEquals(expectedRoleName,actualRoleName);
+        assertEquals(expectedNrOfDays,actualNrOfDays);
     }
+
 }

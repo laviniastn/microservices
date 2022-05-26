@@ -12,7 +12,7 @@ public class ReceipeDTO {
 
     private String category;
 
-    private String kcals;
+    private float kcals;
 
     private byte[] photo;
 
@@ -22,7 +22,7 @@ public class ReceipeDTO {
 
     }
 
-    public ReceipeDTO(int id, String receipeName, String ingredients, String category,String kcals, byte[] photo) {
+    public ReceipeDTO(int id, String receipeName, String ingredients, String category,float kcals, byte[] photo) {
         this.id = id;
         this.receipeName = receipeName;
         this.ingredients = ingredients;
@@ -63,11 +63,11 @@ public class ReceipeDTO {
         this.category = category;
     }
 
-    public String getKcals() {
+    public float getKcals() {
         return kcals;
     }
 
-    public void setKcals(String kcals) {
+    public void setKcals(float kcals) {
         this.kcals = kcals;
     }
 

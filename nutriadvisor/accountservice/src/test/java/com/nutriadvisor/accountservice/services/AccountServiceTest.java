@@ -131,8 +131,8 @@ public class AccountServiceTest {
         /**
          *  GIVEN
          */
-        int id = persons.get(0).getId();
-        given(userAccountRepository.findById(any())).willThrow(new ResourceNotFoundException("User", "user id", id));
+
+        given(userAccountRepository.findById(any())).willReturn(Optional.ofNullable(null));
         String expectedMessage = "User not found with user id : '1'";
 
         /**
