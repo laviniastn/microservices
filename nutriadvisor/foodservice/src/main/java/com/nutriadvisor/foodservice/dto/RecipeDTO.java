@@ -2,11 +2,11 @@ package com.nutriadvisor.foodservice.dto;
 
 import com.nutriadvisor.foodservice.model.FoodMenu;
 
-public class ReceipeDTO {
+public class RecipeDTO {
 
     private int id;
 
-    private String receipeName;
+    private String recipeName;
 
     private String ingredients;
 
@@ -18,13 +18,13 @@ public class ReceipeDTO {
 
     private FoodMenu foodMenu;
 
-    public ReceipeDTO() {
+    public RecipeDTO() {
 
     }
 
-    public ReceipeDTO(int id, String receipeName, String ingredients, String category,float kcals, byte[] photo) {
+    public RecipeDTO(int id, String recipeName, String ingredients, String category, float kcals, byte[] photo) {
         this.id = id;
-        this.receipeName = receipeName;
+        this.recipeName = recipeName;
         this.ingredients = ingredients;
         this.category = category;
         this.kcals=kcals;
@@ -39,12 +39,12 @@ public class ReceipeDTO {
         this.id = id;
     }
 
-    public String getReceipeName() {
-        return receipeName;
+    public String getRecipeName() {
+        return recipeName;
     }
 
-    public void setReceipeName(String receipeName) {
-        this.receipeName = receipeName;
+    public void setRecipeName(String recipeName) {
+        this.recipeName = recipeName;
     }
 
     public String getIngredients() {

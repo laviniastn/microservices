@@ -43,7 +43,7 @@ public class NutritionPlanController {
 
     @GetMapping(value = "/{id}")
     public NutritionPlanDTO getNutritionPlanById(@PathVariable("id") Integer id) {
-        logger.debug("Get utrition plan by id");
+        logger.debug("Get nutrition plan by id");
         return nutritionPlanService.findAll().get(id - 1);
     }
 

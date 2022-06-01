@@ -7,16 +7,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class ReceipeTest {
+public class RecipeTest {
 
-    private Receipe receipe;
+    private Recipe recipe;
 
     /**
      * Initialization
      */
     @BeforeEach
     public void SetUp() {
-        receipe=new Receipe(1, "name", "eggs","breakfast",10.5f,new byte[1]);
+        recipe =new Recipe(1, "name", "eggs","breakfast",10.5f,new byte[1]);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        int actualId=receipe.getId();
+        int actualId= recipe.getId();
         /**
          * THEN
          */
@@ -46,8 +46,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setId(expectedId);
-        int actualId=receipe.getId();
+        recipe.setId(expectedId);
+        int actualId= recipe.getId();
         /**
          * THEN
          */
@@ -55,20 +55,20 @@ public class ReceipeTest {
     }
 
     @Test
-    public void test_getReceipeName(){
+    public void test_getRecipeName(){
         /**
          * GIVEN
          */
-        String expectedReceipeName="name";
+        String expectedRecipeName="name";
 
         /**
          * WHEN
          */
-        String actualReceipeName=receipe.getReceipeName();
+        String actualRecipeName= recipe.getRecipeName();
         /**
          * THEN
          */
-        assertEquals(expectedReceipeName,actualReceipeName);
+        assertEquals(expectedRecipeName,actualRecipeName);
     }
 
     @Test
@@ -81,8 +81,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setReceipeName(expectedRoleName);
-        String actualRoleName=receipe.getReceipeName();
+        recipe.setRecipeName(expectedRoleName);
+        String actualRoleName= recipe.getRecipeName();
         /**
          * THEN
          */
@@ -99,7 +99,7 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        String actualIngredients=receipe.getIngredients();
+        String actualIngredients= recipe.getIngredients();
         /**
          * THEN
          */
@@ -116,8 +116,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setIngredients(expectedIngredients);
-        String actualIngredients=receipe.getIngredients();
+        recipe.setIngredients(expectedIngredients);
+        String actualIngredients= recipe.getIngredients();
         /**
          * THEN
          */
@@ -134,7 +134,7 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        String actualCategory=receipe.getCategory();
+        String actualCategory= recipe.getCategory();
         /**
          * THEN
          */
@@ -151,8 +151,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setCategory(expectedCategory);
-        String actualCategory=receipe.getCategory();
+        recipe.setCategory(expectedCategory);
+        String actualCategory= recipe.getCategory();
         /**
          * THEN
          */
@@ -169,7 +169,7 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        float actualKcals=receipe.getKcals();
+        float actualKcals= recipe.getKcals();
         /**
          * THEN
          */
@@ -186,8 +186,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setKcals(expectedKcals);
-        float actualKcals=receipe.getKcals();
+        recipe.setKcals(expectedKcals);
+        float actualKcals= recipe.getKcals();
         /**
          * THEN
          */
@@ -208,7 +208,7 @@ public class ReceipeTest {
          * WHEN
          */
 
-        byte[] actualBytes=receipe.getPhoto();
+        byte[] actualBytes= recipe.getPhoto();
 
         /**
          * THEN
@@ -228,8 +228,8 @@ public class ReceipeTest {
         /**
          * WHEN
          */
-        receipe.setPhoto(expectedBytes);
-        byte[] actualBytes=receipe.getPhoto();
+        recipe.setPhoto(expectedBytes);
+        byte[] actualBytes= recipe.getPhoto();
         /**
          * THEN
          */

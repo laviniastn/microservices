@@ -1,11 +1,11 @@
 package com.nutriadvisor.foodservice.controller;
 
 
-import com.nutriadvisor.foodservice.controllers.ReceipeController;
-import com.nutriadvisor.foodservice.dto.ReceipeDTO;
+import com.nutriadvisor.foodservice.controllers.RecipeController;
+import com.nutriadvisor.foodservice.dto.RecipeDTO;
 import com.nutriadvisor.foodservice.services.FoodMenuService;
 import com.nutriadvisor.foodservice.services.NutritionPlanService;
-import com.nutriadvisor.foodservice.services.ReceipeService;
+import com.nutriadvisor.foodservice.services.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -23,16 +23,16 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
-public class ReceipeControllerTest {
+public class RecipeControllerTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Autowired
-    ReceipeController receipeController;
+    RecipeController recipeController;
 
     @MockBean
-    private ReceipeService receipeService;
+    private RecipeService recipeService;
 
     @MockBean
     private FoodMenuService foodMenuService;
@@ -41,10 +41,10 @@ public class ReceipeControllerTest {
     private NutritionPlanService nutritionPlanService;
 
     @Test
-    public void test_receipeController_getAllRoles() throws Exception {
+    public void test_recipeController_getAllRoles() throws Exception {
 
         MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders
-                        .get("/receipes")
+                        .get("/recipes")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -53,16 +53,16 @@ public class ReceipeControllerTest {
     }
 
     @Test
-    public void test_receipeController_getRoleById() throws Exception {
+    public void test_recipeController_getRoleById() throws Exception {
 
-        List<ReceipeDTO> receipesDTO = new ArrayList<>();
-        ReceipeDTO roleDTO = new ReceipeDTO(1, "name", "eggs", "breakfast", 10.5f, new byte[1]);
-        receipesDTO.add(roleDTO);
+        List<RecipeDTO> recipesDTO = new ArrayList<>();
+        RecipeDTO roleDTO = new RecipeDTO(1, "name", "eggs", "breakfast", 10.5f, new byte[1]);
+        recipesDTO.add(roleDTO);
 
-        given(receipeService.findAll()).willReturn(receipesDTO);
+        given(recipeService.findAll()).willReturn(recipesDTO);
 
         MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders
-                        .get("/receipes/1")
+                        .get("/recipes/1")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -71,11 +71,11 @@ public class ReceipeControllerTest {
     }
 
     @Test
-    public void test_receipeController_createRole() throws Exception {
+    public void test_recipeController_createRole() throws Exception {
 
-        MvcResult mvcResult = mvc.perform(post("/receipes/create")
+        MvcResult mvcResult = mvc.perform(post("/recipes/create")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"id\":2,\"receipeName\":\"omlette\",\"ingredients\":\"2 eggs, salt, onions\",\"category\":\"breakfast\",\"kcals\":200.0,\"photo\":null}")
+                        .content("{\"id\":2,\"recipeName\":\"omlette\",\"ingredients\":\"2 eggs, salt, onions\",\"category\":\"breakfast\",\"kcals\":200.0,\"photo\":null}")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -84,11 +84,11 @@ public class ReceipeControllerTest {
     }
 
     @Test
-    public void test_receipeController_updateRole() throws Exception {
+    public void test_recipeController_updateRole() throws Exception {
 
-        MvcResult mvcResult = mvc.perform(put("/receipes/update")
+        MvcResult mvcResult = mvc.perform(put("/recipes/update")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"id\":1,\"receipeName\":\"omlette\",\"ingredients\":\"2 eggs, salt, onions\",\"category\":\"breakfast\",\"kcals\":200.0,\"photo\":null}")
+                        .content("{\"id\":1,\"recipeName\":\"omlette\",\"ingredients\":\"2 eggs, salt, onions\",\"category\":\"breakfast\",\"kcals\":200.0,\"photo\":null}")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
@@ -96,9 +96,9 @@ public class ReceipeControllerTest {
     }
 
     @Test
-    public void test_receipeController_deleteRole() throws Exception {
+    public void test_recipeController_deleteRole() throws Exception {
 
-        MvcResult mvcResult = mvc.perform(delete("/receipes/delete/1"))
+        MvcResult mvcResult = mvc.perform(delete("/recipes/delete/1"))
                 .andExpect(status().isOk())
                 .andReturn();
 

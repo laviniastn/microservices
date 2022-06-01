@@ -22,7 +22,7 @@ public class FoodMenu {
     private float kcals;
 
     @OneToMany(mappedBy="foodMenu")
-    private List<Receipe> receipes;
+    private List<Recipe> receipes;
 
     @ManyToOne
     @JoinColumn(name="nutrition_plan_id", nullable=false)

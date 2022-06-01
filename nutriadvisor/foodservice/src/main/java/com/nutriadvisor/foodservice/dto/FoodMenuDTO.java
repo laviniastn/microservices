@@ -1,7 +1,7 @@
 package com.nutriadvisor.foodservice.dto;
 
 import com.nutriadvisor.foodservice.model.NutritionPlan;
-import com.nutriadvisor.foodservice.model.Receipe;
+import com.nutriadvisor.foodservice.model.Recipe;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class FoodMenuDTO {
 
     private float kcals;
 
-    private List<Receipe> receipes;
+    private List<Recipe> receipes;
 
     private NutritionPlan nutritionPlan;
 

@@ -2,13 +2,10 @@ package com.nutriadvisor.foodservice.controller;
 
 
 import com.nutriadvisor.foodservice.controllers.NutritionPlanController;
-import com.nutriadvisor.foodservice.controllers.ReceipeController;
 import com.nutriadvisor.foodservice.dto.NutritionPlanDTO;
-import com.nutriadvisor.foodservice.dto.ReceipeDTO;
-import com.nutriadvisor.foodservice.model.NutritionPlan;
 import com.nutriadvisor.foodservice.services.FoodMenuService;
 import com.nutriadvisor.foodservice.services.NutritionPlanService;
-import com.nutriadvisor.foodservice.services.ReceipeService;
+import com.nutriadvisor.foodservice.services.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -35,7 +32,7 @@ public class NutritionPlanControllerTest {
     NutritionPlanController nutritionPlanController;
 
     @MockBean
-    private ReceipeService roleService;
+    private RecipeService roleService;
 
     @MockBean
     private FoodMenuService foodMenuService;

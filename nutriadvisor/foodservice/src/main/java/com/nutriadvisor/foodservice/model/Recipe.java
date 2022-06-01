@@ -4,20 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.util.List;
 
-@Entity(name = "receipes")
+@Entity(name = "recipes")
 @Inheritance
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Receipe {
+public class Recipe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private int id;
 
-    @Column(name = "receipe_name", nullable = true)
-    private String receipeName;
+    @Column(name = "recipe_name", nullable = true)
+    private String recipeName;
 
     @Column(name = "ingredients", nullable = true)
     private String ingredients;
@@ -36,13 +35,13 @@ public class Receipe {
     @JoinColumn(name="food_menu_id", nullable=false)
     private FoodMenu foodMenu;
 
-    public Receipe() {
+    public Recipe() {
 
     }
 
-    public Receipe(int id, String receipeName, String ingredients, String category,float kcals, byte[] photo) {
+    public Recipe(int id, String recipeName, String ingredients, String category, float kcals, byte[] photo) {
         this.id = id;
-        this.receipeName = receipeName;
+        this.recipeName = recipeName;
         this.ingredients = ingredients;
         this.category = category;
         this.kcals=kcals;
@@ -57,12 +56,12 @@ public class Receipe {
         this.id = id;
     }
 
-    public String getReceipeName() {
-        return receipeName;
+    public String getRecipeName() {
+        return recipeName;
     }
 
-    public void setReceipeName(String receipeName) {
-        this.receipeName = receipeName;
+    public void setRecipeName(String recipeName) {
+        this.recipeName = recipeName;
     }
 
     public String getIngredients() {

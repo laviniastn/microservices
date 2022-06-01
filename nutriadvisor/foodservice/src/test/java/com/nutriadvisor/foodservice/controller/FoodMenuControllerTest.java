@@ -5,7 +5,7 @@ import com.nutriadvisor.foodservice.controllers.FoodMenuController;
 import com.nutriadvisor.foodservice.dto.FoodMenuDTO;
 import com.nutriadvisor.foodservice.services.FoodMenuService;
 import com.nutriadvisor.foodservice.services.NutritionPlanService;
-import com.nutriadvisor.foodservice.services.ReceipeService;
+import com.nutriadvisor.foodservice.services.RecipeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -32,7 +32,7 @@ public class FoodMenuControllerTest {
     FoodMenuController foodMenuController;
 
     @MockBean
-    private ReceipeService roleService;
+    private RecipeService roleService;
 
     @MockBean
     private FoodMenuService foodMenuService;
