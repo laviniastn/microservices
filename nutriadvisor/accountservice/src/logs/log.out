@@ -151,3 +151,19 @@ DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Up
 DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Get user account by id
 DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
 DEBUG main com.nutriadvisor.accountservice.controllers.UserAccountController -Delete user account
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8090-exec-3 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8090-exec-1 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.RoleController -Get all roles
+DEBUG http-nio-8090-exec-5 com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG http-nio-8090-exec-7 com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG http-nio-8090-exec-10 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-1 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-1 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.UserAccountController -Create user account
+DEBUG http-nio-8090-exec-3 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-1 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts
+DEBUG http-nio-8090-exec-2 com.nutriadvisor.accountservice.controllers.UserAccountController -Get all user accounts

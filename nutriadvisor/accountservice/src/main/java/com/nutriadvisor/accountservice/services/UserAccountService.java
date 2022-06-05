@@ -1,15 +1,15 @@
 package com.nutriadvisor.accountservice.services;
 
-
 import com.nutriadvisor.accountservice.dto.UserAccountDTO;
-import com.nutriadvisor.accountservice.dto.builders.UserAccountBuilder;
-import com.nutriadvisor.accountservice.errorhandler.ResourceNotFoundException;
+import com.nutriadvisor.accountservice.dto.mappers.UserAccountMapper;
 import com.nutriadvisor.accountservice.model.UserAccount;
 import com.nutriadvisor.accountservice.repositories.UserAccountRepository;
 import com.nutriadvisor.accountservice.validators.UserFieldsValidator;
+import errorhandler.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -17,35 +17,36 @@ import java.util.stream.Collectors;
 @Service
 public class UserAccountService {
 
-    private final UserAccountRepository userRepository;
+    private final UserAccountRepository userAccountRepository;
 
     @Autowired
-    public UserAccountService(UserAccountRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserAccountService(UserAccountRepository userAccountRepository) {
+        this.userAccountRepository = userAccountRepository;
     }
 
     public List<UserAccountDTO> findAll() {
-        List<UserAccount> persons = userRepository.findAll();
-        return persons.stream().map(UserAccountBuilder::generateDTOFromEntity).collect(Collectors.toList());
+        List<UserAccount> userAccounts = userAccountRepository.findAll();
+        return userAccounts.stream().map(userAccount -> UserAccountMapper.INSTANCE.fromUserAccount(userAccount)).collect(Collectors.toList());
     }
 
-    public Integer insert(UserAccountDTO userDTO) {
-        UserFieldsValidator.validateInsertOrUpdate(userDTO);
-        return userRepository.save(UserAccountBuilder.generateEntityFromDTO(userDTO)).getId();
+    public Integer insert(UserAccountDTO userAccountDTO) {
+        UserFieldsValidator.validateInsertOrUpdate(userAccountDTO);
+        return userAccountRepository.save(UserAccountMapper.INSTANCE.toUserAccount(userAccountDTO)).getId();
     }
 
-    public Integer update(UserAccountDTO userDTO) {
-        Optional<UserAccount> user = userRepository.findById(userDTO.getId());
+    public Integer update(UserAccountDTO userAccountDTO) {
+
+        UserFieldsValidator.validateInsertOrUpdate(userAccountDTO);
+
+        Optional<UserAccount> user = userAccountRepository.findById(UserAccountMapper.INSTANCE.toUserAccount(userAccountDTO).getId());
         if (!user.isPresent()) {
-            throw new ResourceNotFoundException("User", "user id", userDTO.getId());
+            throw new ResourceNotFoundException("UserAccount", "userAccount id", UserAccountMapper.INSTANCE.toUserAccount(userAccountDTO).getId());
         }
 
-        UserFieldsValidator.validateInsertOrUpdate(userDTO);
-
-        return userRepository.save(UserAccountBuilder.generateEntityFromDTO(userDTO)).getId();
+        return userAccountRepository.save(UserAccountMapper.INSTANCE.toUserAccount(userAccountDTO)).getId();
     }
 
     public void delete(Integer id) {
-        this.userRepository.deleteById(id);
+        this.userAccountRepository.deleteById(id);
     }
 }

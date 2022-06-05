@@ -1,20 +1,25 @@
 package com.nutriadvisor.accountservice.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModelProperty;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Type;
+import hashing.PasswordHash;
+
 
 import javax.persistence.*;
-import java.util.List;
-
+import java.io.Serializable;
+import java.security.NoSuchAlgorithmException;
 
 @Entity(name = "accounts")
 @Inheritance
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class UserAccount {
+@Getter
+@Setter
+@NoArgsConstructor
+public class UserAccount implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,7 +48,7 @@ public class UserAccount {
     private byte[] photo;
 
     public UserAccount(int id, String firstName, String lastName, String email,String password,Role role,
-                byte[] photo) {
+                byte[] photo) throws NoSuchAlgorithmException {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -54,62 +59,4 @@ public class UserAccount {
 
     }
 
-    public UserAccount() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public byte[] getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(byte[] photo) {
-        this.photo = photo;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
 }

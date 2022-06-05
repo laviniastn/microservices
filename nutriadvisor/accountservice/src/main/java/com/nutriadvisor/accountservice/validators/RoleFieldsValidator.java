@@ -1,7 +1,7 @@
 package com.nutriadvisor.accountservice.validators;
 
 import com.nutriadvisor.accountservice.dto.RoleDTO;
-import com.nutriadvisor.accountservice.errorhandler.IncorrectParameterException;
+import errorhandler.IncorrectParameterException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

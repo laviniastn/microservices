@@ -1,9 +1,9 @@
 package com.nutriadvisor.foodservice.services;
 
 import com.nutriadvisor.foodservice.dto.RecipeDTO;
-import com.nutriadvisor.foodservice.errorhandler.ResourceNotFoundException;
 import com.nutriadvisor.foodservice.model.Recipe;
 import com.nutriadvisor.foodservice.repositories.RecipeRepository;
+import errorhandler.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

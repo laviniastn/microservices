@@ -1,7 +1,7 @@
 package com.nutriadvisor.foodservice.validators;
 
 import com.nutriadvisor.foodservice.dto.NutritionPlanDTO;
-import com.nutriadvisor.foodservice.errorhandler.IncorrectParameterException;
+import errorhandler.IncorrectParameterException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

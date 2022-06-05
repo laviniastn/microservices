@@ -34,7 +34,7 @@ public class RecipeController {
     @GetMapping(value = "/{id}")
     public RecipeDTO getRoleById(@PathVariable("id") Integer id) {
         logger.debug("Get  recipe by id");
-        return recipeService.findAll().get(id - 1);
+        return recipeService.findAll().get(id);
     }
 
     @PostMapping(value = "/create")

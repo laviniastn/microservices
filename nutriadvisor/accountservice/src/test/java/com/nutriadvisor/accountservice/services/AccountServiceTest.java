@@ -1,16 +1,18 @@
 package com.nutriadvisor.accountservice.services;
 
 import com.nutriadvisor.accountservice.dto.UserAccountDTO;
-import com.nutriadvisor.accountservice.errorhandler.ResourceNotFoundException;
+import com.nutriadvisor.accountservice.dto.mappers.UserAccountMapper;
 import com.nutriadvisor.accountservice.model.Role;
 import com.nutriadvisor.accountservice.model.UserAccount;
 import com.nutriadvisor.accountservice.repositories.UserAccountRepository;
+import errorhandler.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,17 +41,17 @@ public class AccountServiceTest {
      * Initialization
      */
     @BeforeEach
-    public void SetUp() {
+    public void SetUp() throws NoSuchAlgorithmException {
         accountService = new UserAccountService(userAccountRepository);
         Role role = new Role(1, "role");
-
-        userAccountDTO = new UserAccountDTO(1, "Lavinia", "Stan", "laviniastn25@gmail.com", "password", role, null);
-        personsDTO = new ArrayList<>();
-        personsDTO.add(userAccountDTO);
 
         userAccount = new UserAccount(1, "Lavinia", "Stan", "laviniastn25@gmail.com", "password", role, null);
         persons = new ArrayList<>();
         persons.add(userAccount);
+
+        userAccountDTO = UserAccountMapper.INSTANCE.fromUserAccount(userAccount);
+        personsDTO = new ArrayList<>();
+        personsDTO.add(userAccountDTO);
 
     }
 
@@ -71,15 +73,7 @@ public class AccountServiceTest {
          * THEN
          */
         assertEquals(personsDTO.size(), actualPersonsDTO.size());
-        assertEquals(personsDTO.get(0).getId(), actualPersonsDTO.get(0).getId());
-        assertEquals(personsDTO.get(0).getFirstName(), actualPersonsDTO.get(0).getFirstName());
-        assertEquals(personsDTO.get(0).getLastName(), actualPersonsDTO.get(0).getLastName());
-        assertEquals(personsDTO.get(0).getEmail(), actualPersonsDTO.get(0).getEmail());
-        assertEquals(personsDTO.get(0).getPassword(), actualPersonsDTO.get(0).getPassword());
-        assertEquals(personsDTO.get(0).getRole().getId(), actualPersonsDTO.get(0).getRole().getId());
-        assertEquals(personsDTO.get(0).getRole().getRoleName(), actualPersonsDTO.get(0).getRole().getRoleName());
-        assertEquals(personsDTO.get(0).getPhoto(), actualPersonsDTO.get(0).getPhoto());
-    }
+          }
 
     @Test
     public void userAccountService_insert() {

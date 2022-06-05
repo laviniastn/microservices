@@ -2,6 +2,9 @@ package com.nutriadvisor.accountservice.controller;
 
 import com.nutriadvisor.accountservice.controllers.RoleController;
 import com.nutriadvisor.accountservice.dto.RoleDTO;
+import com.nutriadvisor.accountservice.dto.mappers.RoleMapper;
+import com.nutriadvisor.accountservice.dto.mappers.UserAccountMapper;
+import com.nutriadvisor.accountservice.model.Role;
 import com.nutriadvisor.accountservice.services.RoleService;
 import com.nutriadvisor.accountservice.services.UserAccountService;
 import org.junit.jupiter.api.Test;
@@ -51,7 +54,8 @@ public class RoleControllerTest {
     public void test_roleController_getRoleById() throws Exception {
 
         List<RoleDTO> rolesDTO = new ArrayList<>();
-        RoleDTO roleDTO = new RoleDTO(1, "role");
+        Role role = new Role(1,"role");
+        RoleDTO roleDTO = RoleMapper.INSTANCE.fromRole(role);
         rolesDTO.add(roleDTO);
 
         given(roleService.findAll()).willReturn(rolesDTO);

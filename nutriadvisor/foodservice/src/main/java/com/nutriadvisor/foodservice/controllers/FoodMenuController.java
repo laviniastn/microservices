@@ -44,7 +44,7 @@ public class FoodMenuController {
     @GetMapping(value = "/{id}")
     public FoodMenuDTO getFoodMenuById(@PathVariable("id") Integer id) {
         logger.debug("Get food menu by id");
-        return userService.findAll().get(id - 1);
+        return userService.findAll().get(id);
     }
 
     @PostMapping(value = "/create")

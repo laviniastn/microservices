@@ -1,8 +1,12 @@
 package com.nutriadvisor.accountservice.controller;
 
 import com.nutriadvisor.accountservice.controllers.UserAccountController;
+import com.nutriadvisor.accountservice.dto.RoleDTO;
 import com.nutriadvisor.accountservice.dto.UserAccountDTO;
+import com.nutriadvisor.accountservice.dto.mappers.RoleMapper;
+import com.nutriadvisor.accountservice.dto.mappers.UserAccountMapper;
 import com.nutriadvisor.accountservice.model.Role;
+import com.nutriadvisor.accountservice.model.UserAccount;
 import com.nutriadvisor.accountservice.services.RoleService;
 import com.nutriadvisor.accountservice.services.UserAccountService;
 import org.junit.jupiter.api.Test;
@@ -54,7 +58,9 @@ public class UserAccountControllerTest {
         Role role=new Role(1,"role");
 
         List<UserAccountDTO> userAccountsDTO = new ArrayList<>();
-        UserAccountDTO userAccountDTO = new UserAccountDTO(1, "Lavinia","Stan", "laviniastn25@gmail.com", "password",role,null);
+        UserAccount userAccount = new UserAccount(1, "Lavinia","Stan", "laviniastn25@gmail.com", "password",role,null);
+
+        UserAccountDTO userAccountDTO = UserAccountMapper.INSTANCE.fromUserAccount(userAccount);
         userAccountsDTO.add(userAccountDTO);
 
         given(userAccountService.findAll()).willReturn(userAccountsDTO);

@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.security.NoSuchAlgorithmException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
@@ -17,7 +19,7 @@ public class UserAccountTest {
      * Initialization
      */
     @BeforeEach
-    public void SetUp() {
+    public void SetUp() throws NoSuchAlgorithmException {
         role=new Role(1,"role");
         userAccount = new UserAccount(1, "Lavinia","Stan", "laviniastn25@gmail.com", "password",role,null);
     }

@@ -1,7 +1,11 @@
 package com.nutriadvisor.foodservice.dto;
 
 import com.nutriadvisor.foodservice.model.FoodMenu;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class RecipeDTO {
 
     private int id;
@@ -28,54 +32,6 @@ public class RecipeDTO {
         this.ingredients = ingredients;
         this.category = category;
         this.kcals=kcals;
-        this.photo = photo;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getRecipeName() {
-        return recipeName;
-    }
-
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
-    }
-
-    public String getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public float getKcals() {
-        return kcals;
-    }
-
-    public void setKcals(float kcals) {
-        this.kcals = kcals;
-    }
-
-    public byte[] getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(byte[] photo) {
         this.photo = photo;
     }
 

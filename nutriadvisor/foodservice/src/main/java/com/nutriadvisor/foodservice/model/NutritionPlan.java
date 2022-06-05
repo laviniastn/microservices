@@ -1,6 +1,9 @@
 package com.nutriadvisor.foodservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,6 +11,9 @@ import java.util.List;
 @Entity(name = "nutrition_plan")
 @Inheritance
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Getter
+@Setter
+@NoArgsConstructor
 public class NutritionPlan {
 
     @Id
@@ -21,30 +27,10 @@ public class NutritionPlan {
     @OneToMany(mappedBy="nutritionPlan")
     private List<FoodMenu> foodMenus;
 
-    public NutritionPlan(){
-
-    }
-
     public NutritionPlan(int id, int nrOfDays){
         this.id=id;
         this.nrOfDays=nrOfDays;
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getNrOfDays() {
-        return nrOfDays;
-    }
-
-    public void setNrOfDays(int nrOfDays) {
-        this.nrOfDays = nrOfDays;
     }
 
 }

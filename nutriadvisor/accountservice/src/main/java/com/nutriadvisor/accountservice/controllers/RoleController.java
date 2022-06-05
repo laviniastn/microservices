@@ -34,11 +34,12 @@ public class RoleController {
     @GetMapping(value = "/{id}")
     public RoleDTO getRoleById(@PathVariable("id") Integer id) {
         logger.debug("Get  role by id");
-        return roleService.findAll().get(id - 1);
+        return roleService.findAll().get(id);
     }
 
     @PostMapping(value = "/create")
     public Integer createRole(@RequestBody RoleDTO roleDTO) {
+
         logger.debug("Create role");
         return roleService.insert(roleDTO);
     }

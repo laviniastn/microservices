@@ -2,10 +2,12 @@ package com.nutriadvisor.foodservice.services;
 
 import com.nutriadvisor.foodservice.dto.NutritionPlanDTO;
 import com.nutriadvisor.foodservice.dto.builders.NutritionPlanBuilder;
-import com.nutriadvisor.foodservice.errorhandler.ResourceNotFoundException;
+import com.nutriadvisor.foodservice.dto.mappers.FoodMenuMapper;
+import com.nutriadvisor.foodservice.dto.mappers.NutritionPlanMapper;
 import com.nutriadvisor.foodservice.model.NutritionPlan;
 import com.nutriadvisor.foodservice.repositories.NutritionPlanRepository;
 import com.nutriadvisor.foodservice.validators.NutritionPlanFieldsValidator;
+import errorhandler.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,23 +27,26 @@ public class NutritionPlanService {
 
     public List<NutritionPlanDTO> findAll() {
         List<NutritionPlan> nutritionPlans = nutritionPlanRepository.findAll();
-        return nutritionPlans.stream().map(NutritionPlanBuilder::generateDTOFromEntity).collect(Collectors.toList());
+        return nutritionPlans.stream().map(nutritionPlanDTO -> NutritionPlanMapper.INSTANCE.fromNutritionPlan(nutritionPlanDTO)).collect(Collectors.toList());
     }
 
     public Integer insert(NutritionPlanDTO nutritionPlanDTO) {
         NutritionPlanFieldsValidator.validateInsertOrUpdate(nutritionPlanDTO);
-        return nutritionPlanRepository.save(NutritionPlanBuilder.generateEntityFromDTO(nutritionPlanDTO)).getId();
+        return nutritionPlanRepository.save(NutritionPlanMapper.INSTANCE.toNutritionPlan(nutritionPlanDTO)).getId();
     }
 
     public Integer update(NutritionPlanDTO nutritionPlanDTO) {
-        Optional<NutritionPlan> nutritionPlan = nutritionPlanRepository.findById(nutritionPlanDTO.getId());
+
+        NutritionPlanFieldsValidator.validateInsertOrUpdate(nutritionPlanDTO);
+
+        NutritionPlan nutritionPlanFromDTO = NutritionPlanMapper.INSTANCE.toNutritionPlan(nutritionPlanDTO);
+
+        Optional<NutritionPlan> nutritionPlan = nutritionPlanRepository.findById(nutritionPlanFromDTO.getId());
         if (!nutritionPlan.isPresent()) {
             throw new ResourceNotFoundException("nutritionPlan", "nutritionPlan id", nutritionPlanDTO.getId());
         }
 
-        NutritionPlanFieldsValidator.validateInsertOrUpdate(nutritionPlanDTO);
-
-        return nutritionPlanRepository.save(NutritionPlanBuilder.generateEntityFromDTO(nutritionPlanDTO)).getId();
+        return nutritionPlanRepository.save(NutritionPlanMapper.INSTANCE.toNutritionPlan(nutritionPlanDTO)).getId();
     }
 
     public void delete(Integer id) {

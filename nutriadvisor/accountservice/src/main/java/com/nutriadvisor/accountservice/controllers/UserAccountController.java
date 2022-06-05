@@ -2,6 +2,7 @@ package com.nutriadvisor.accountservice.controllers;
 
 import com.nutriadvisor.accountservice.dto.UserAccountDTO;
 import com.nutriadvisor.accountservice.services.UserAccountService;
+import hashing.PasswordHash;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -10,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -44,12 +46,14 @@ public class UserAccountController {
     @GetMapping(value = "/{id}")
     public UserAccountDTO getUserAccountById(@PathVariable("id") Integer id) {
         logger.debug("Get user account by id");
-        return userService.findAll().get(id - 1);
+        return userService.findAll().get(id);
     }
 
     @PostMapping(value = "/create")
-    public Integer createUserAccount(@RequestBody UserAccountDTO userDTO) {
+    public Integer createUserAccount(@RequestBody UserAccountDTO userDTO) throws NoSuchAlgorithmException {
         logger.debug("Create user account");
+        String passwordEncode = PasswordHash.hashPassword(userDTO.getPassword());
+        userDTO.setPassword(passwordEncode);
         return userService.insert(userDTO);
     }
 

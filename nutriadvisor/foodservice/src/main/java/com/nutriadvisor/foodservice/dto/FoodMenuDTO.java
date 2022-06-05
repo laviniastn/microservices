@@ -2,9 +2,13 @@ package com.nutriadvisor.foodservice.dto;
 
 import com.nutriadvisor.foodservice.model.NutritionPlan;
 import com.nutriadvisor.foodservice.model.Recipe;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 public class FoodMenuDTO {
 
     private int id;
@@ -28,27 +32,4 @@ public class FoodMenuDTO {
 
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getDayNr() {
-        return dayNr;
-    }
-
-    public void setDayNr(int dayNr) {
-        this.dayNr = dayNr;
-    }
-
-    public float getKcals() {
-        return kcals;
-    }
-
-    public void setKcals(float kcals) {
-        this.kcals = kcals;
-    }
 }

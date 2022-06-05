@@ -1,4 +1,4 @@
-package com.nutriadvisor.accountservice.errorhandler;
+package errorhandler;
 
 public class ResourceNotFoundException extends RuntimeException {
     private String resourceName;

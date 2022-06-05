@@ -120,3 +120,5 @@ DEBUG main com.nutriadvisor.foodservice.controllers.RecipeController -Update rec
 DEBUG main com.nutriadvisor.foodservice.controllers.RecipeController -Get all receipes
 DEBUG http-nio-8089-exec-3 com.nutriadvisor.foodservice.controllers.RecipeController -Get all recipes
 DEBUG http-nio-8089-exec-6 com.nutriadvisor.foodservice.controllers.RecipeController -Get all recipes
+DEBUG http-nio-8088-exec-5 com.nutriadvisor.foodservice.controllers.ReceipeController -Get all receipes
+DEBUG http-nio-8091-exec-3 com.nutriadvisor.foodservice.controllers.RecipeController -Get all recipes

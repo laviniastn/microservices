@@ -1,4 +1,4 @@
-package com.nutriadvisor.foodservice.errorhandler;
+package errorhandler;
 
 import java.util.List;
 

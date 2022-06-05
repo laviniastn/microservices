@@ -1,9 +1,10 @@
 package com.nutriadvisor.accountservice.services;
 
 import com.nutriadvisor.accountservice.dto.RoleDTO;
-import com.nutriadvisor.accountservice.errorhandler.ResourceNotFoundException;
+import com.nutriadvisor.accountservice.dto.mappers.RoleMapper;
 import com.nutriadvisor.accountservice.model.Role;
 import com.nutriadvisor.accountservice.repositories.RoleRepository;
+import errorhandler.ResourceNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,15 +42,16 @@ public class RoleServiceTest {
     public void SetUp() {
         roleService = new RoleService(roleRepository);
 
-        roleDTO = new RoleDTO(1, "role");
-
-        rolesDTO = new ArrayList<>();
-        rolesDTO.add(roleDTO);
 
         role = new Role(1, "role");
 
         roles = new ArrayList<>();
         roles.add(role);
+
+        roleDTO = RoleMapper.INSTANCE.fromRole(role);
+
+        rolesDTO = new ArrayList<>();
+        rolesDTO.add(roleDTO);
 
     }
 
@@ -71,9 +73,7 @@ public class RoleServiceTest {
          * THEN
          */
         assertEquals(rolesDTO.size(), actualRolesDTO.size());
-        assertEquals(rolesDTO.get(0).getId(), actualRolesDTO.get(0).getId());
-        assertEquals(rolesDTO.get(0).getRoleName(), actualRolesDTO.get(0).getRoleName());
-          }
+            }
 
     @Test
     public void roleService_insert() {

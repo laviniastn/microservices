@@ -1,5 +1,10 @@
 package com.nutriadvisor.accountservice.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class RoleDTO {
 
     private int id;
@@ -12,20 +17,5 @@ public class RoleDTO {
         this.roleName = roleName;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
 
 }

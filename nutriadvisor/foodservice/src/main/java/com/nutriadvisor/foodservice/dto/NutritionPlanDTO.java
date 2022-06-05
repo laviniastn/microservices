@@ -1,9 +1,13 @@
 package com.nutriadvisor.foodservice.dto;
 
 import com.nutriadvisor.foodservice.model.FoodMenu;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 public class NutritionPlanDTO {
 
     private int id;
@@ -22,19 +26,4 @@ public class NutritionPlanDTO {
 
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getNrOfDays() {
-        return nrOfDays;
-    }
-
-    public void setNrOfDays(int nrOfDays) {
-        this.nrOfDays = nrOfDays;
-    }
 }

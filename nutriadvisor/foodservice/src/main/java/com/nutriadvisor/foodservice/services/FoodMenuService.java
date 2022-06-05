@@ -2,10 +2,11 @@ package com.nutriadvisor.foodservice.services;
 
 import com.nutriadvisor.foodservice.dto.FoodMenuDTO;
 import com.nutriadvisor.foodservice.dto.builders.FoodMenuBuilder;
-import com.nutriadvisor.foodservice.errorhandler.ResourceNotFoundException;
+import com.nutriadvisor.foodservice.dto.mappers.FoodMenuMapper;
 import com.nutriadvisor.foodservice.model.FoodMenu;
 import com.nutriadvisor.foodservice.repositories.FoodMenuRepository;
 import com.nutriadvisor.foodservice.validators.FoodMenuFieldsValidator;
+import errorhandler.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,35 +17,36 @@ import java.util.stream.Collectors;
 @Service
 public class FoodMenuService {
 
-    private final FoodMenuRepository userRepository;
+    private final FoodMenuRepository foodMenuRepository;
 
     @Autowired
-    public FoodMenuService(FoodMenuRepository userRepository) {
-        this.userRepository = userRepository;
+    public FoodMenuService(FoodMenuRepository foodMenuRepository) {
+        this.foodMenuRepository = foodMenuRepository;
     }
 
     public List<FoodMenuDTO> findAll() {
-        List<FoodMenu> persons = userRepository.findAll();
-        return persons.stream().map(FoodMenuBuilder::generateDTOFromEntity).collect(Collectors.toList());
+        List<FoodMenu> foodMenus = foodMenuRepository.findAll();
+        return foodMenus.stream().map(foodMenuDTO -> FoodMenuMapper.INSTANCE.fromFoodMenu(foodMenuDTO)).collect(Collectors.toList());
     }
 
-    public Integer insert(FoodMenuDTO userDTO) {
-        FoodMenuFieldsValidator.validateInsertOrUpdate(userDTO);
-        return userRepository.save(FoodMenuBuilder.generateEntityFromDTO(userDTO)).getId();
+    public Integer insert(FoodMenuDTO foodMenuDTO) {
+        FoodMenuFieldsValidator.validateInsertOrUpdate(foodMenuDTO);
+        return foodMenuRepository.save(FoodMenuMapper.INSTANCE.toFoodMenu(foodMenuDTO)).getId();
     }
 
-    public Integer update(FoodMenuDTO userDTO) {
-        Optional<FoodMenu> user = userRepository.findById(userDTO.getId());
-        if (!user.isPresent()) {
-            throw new ResourceNotFoundException("FoodMenu", "foodMenu id", userDTO.getId());
+    public Integer update(FoodMenuDTO foodMenuDTO) {
+        FoodMenuFieldsValidator.validateInsertOrUpdate(foodMenuDTO);
+
+        FoodMenu foodMenuFromDTO = FoodMenuMapper.INSTANCE.toFoodMenu(foodMenuDTO);
+        Optional<FoodMenu> foodMenu = foodMenuRepository.findById(foodMenuDTO.getId());
+        if (!foodMenu.isPresent()) {
+            throw new ResourceNotFoundException("FoodMenu", "foodMenu id", foodMenuFromDTO.getId());
         }
 
-        FoodMenuFieldsValidator.validateInsertOrUpdate(userDTO);
-
-        return userRepository.save(FoodMenuBuilder.generateEntityFromDTO(userDTO)).getId();
+        return foodMenuRepository.save(FoodMenuMapper.INSTANCE.toFoodMenu(foodMenuDTO)).getId();
     }
 
     public void delete(Integer id) {
-        this.userRepository.deleteById(id);
+        this.foodMenuRepository.deleteById(id);
     }
 }
