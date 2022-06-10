@@ -9,15 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <artifactId>emailservice</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>com.microservices</groupId>
-            <artifactId>utils</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>2.5.6</version>
         </dependency>
     </dependencies>
-
-    <artifactId>accountservice</artifactId>
 
     <properties>
         <java.version>8</java.version>

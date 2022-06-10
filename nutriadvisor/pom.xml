@@ -5,9 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>accountservice</module>
-        <module>notificationservice</module>
         <module>foodservice</module>
         <module>utils</module>
+        <module>emailservice</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

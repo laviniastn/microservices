@@ -1,0 +1,1 @@
+DEBUG http-nio-8092-exec-2 com.nutriadvisor.emailservice.controllers.EmailController -Email sent

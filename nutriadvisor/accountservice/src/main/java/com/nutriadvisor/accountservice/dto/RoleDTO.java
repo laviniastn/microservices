@@ -11,11 +11,9 @@ public class RoleDTO {
 
     private String roleName;
 
-
     public RoleDTO(int id, String roleName) {
         this.id = id;
         this.roleName = roleName;
     }
-
 
 }
