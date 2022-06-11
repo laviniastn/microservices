@@ -24,8 +24,8 @@ public class Role {
     @Column(name = "role_name", nullable = true)
     private String roleName;
 
-//    @OneToMany(mappedBy="role")
-//    private List<UserAccount> userAccounts;
+    @OneToMany(mappedBy="role")
+    private List<UserAccount> userAccounts;
 
     public Role(int id, String roleName){
         this.id=id;
